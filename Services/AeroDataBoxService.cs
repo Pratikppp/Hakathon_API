@@ -16,7 +16,7 @@ namespace Hackathon_API.Services
         public AeroDataBoxService(HttpClient http, IConfiguration config)
         {
             _http = http;
-            _connectionString = config.GetConnectionString("Default");
+            _connectionString = config.GetConnectionString("DefaultConnection");
         }
 
         public async Task<AirportDelay> GetAirportDelays(string country, string date)
